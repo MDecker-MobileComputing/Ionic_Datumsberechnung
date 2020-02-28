@@ -1,20 +1,30 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Datumsrechner</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-segment (ionChange)="onSegmentButtonGeaendert($event)" value="plusMinus">
+      <ion-segment-button value="plusMinus">
+        <ion-label>Plus/Minus Tage</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="differenz">
+        <ion-label>Differenz</ion-label>
+      </ion-segment-button>
+    </ion-segment>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!--<h1>Lorem Ipsum</h1> -->
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list>
+    <ion-item>
+      <ion-label>Datum</ion-label>
+      <ion-datetime display-format="DD MMM YYYY (DDDD)"
+                     picker-format="DD.MM.YYYY"
+                       [(ngModel)]="_heuteDatum">
+      </ion-datetime>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
