@@ -15,9 +15,11 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
   <!--<h1>Lorem Ipsum</h1> -->
 
   <ion-list>
+
     <ion-item>
       <ion-label>Datum</ion-label>
       <ion-datetime display-format="DD MMM YYYY (DDDD)"
@@ -25,6 +27,15 @@
                        [(ngModel)]="_heuteDatum">
       </ion-datetime>
     </ion-item>
+
+    <ion-item [hidden]="_datum2PickerUnsichtbar">
+      <ion-label>Datum 2</ion-label>
+      <ion-datetime display-format="DD MMM YYYY (DDDD)"
+                     picker-format="DD.MM.YYYY"
+                       [(ngModel)]="_heuteDatum">
+      </ion-datetime>
+    </ion-item>
+
   </ion-list>
 
 </ion-content>
