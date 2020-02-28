@@ -8,10 +8,12 @@ import { SegmentChangeEventDetail } from '@ionic/core';
 })
 export class HomePage {
 
-
   _heuteDatum: String = new Date().toISOString();
 
-  _datum2PickerUnsichtbar = true;
+  /* Wird auf "Datum 1" geändert, wenn mit Segment-Button "differenz" ausgewählt. */
+  _datumPicker1Label = "Datum";
+
+  _datumPicker2Unsichtbar = true;
 
 
   constructor() {}
@@ -29,13 +31,13 @@ export class HomePage {
     switch (event.detail.value) {
 
       case "plusMinus":
-          console.log("Modus \"plusMinus\"");
-          this._datum2PickerUnsichtbar = true;
+          this._datumPicker2Unsichtbar = true;
+          this._datumPicker1Label      = "Datum";
         break;
 
       case "differenz":
-          console.log("Modus \"different\"");
-          this._datum2PickerUnsichtbar = false;
+          this._datumPicker2Unsichtbar = false;
+          this._datumPicker1Label      = "Datum 1";
         break;
 
       default:
