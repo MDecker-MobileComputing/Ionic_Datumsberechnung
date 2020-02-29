@@ -18,8 +18,8 @@ export class HomePage {
   /** Wird auf "Datum 1" geändert, wenn mit Segment-Button "differenz" ausgewählt. */
   _datumPicker1Label = "Datum";
 
-  /** Flag für Sichtbarkeit von zweitem DatePicker-Element */
-  _datumPicker2Unsichtbar = true;
+  /** Flag, mit dem die Sichtbarkeit der dynamischen Elemente gesteuert wird. */
+  _plusMinusModus = true;
 
 
   constructor( private _datumService : DatumService ) {
@@ -42,13 +42,13 @@ export class HomePage {
     switch (event.detail.value) {
 
       case "plusMinus":
-          this._datumPicker2Unsichtbar = true;
-          this._datumPicker1Label      = "Datum";
+          this._plusMinusModus    = true;
+          this._datumPicker1Label = "Datum";
         break;
 
       case "differenz":
-          this._datumPicker2Unsichtbar = false;
-          this._datumPicker1Label      = "Datum 1";
+          this._plusMinusModus    = false;
+          this._datumPicker1Label = "Datum 1";
         break;
 
       default:
