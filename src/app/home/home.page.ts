@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DatumService } from '../datum.service';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -29,7 +30,8 @@ export class HomePage {
    *
    * @param _datumService  Service-Objekt mit Logik für Durchführung Datumsberechnungen
    */
-  constructor( private _datumService : DatumService ) {
+  constructor( private _datumService : DatumService,
+               private _alertCtrl    : AlertController ) {
 
     this._datumPicker1 = new Date().toISOString();
 
@@ -77,13 +79,30 @@ export class HomePage {
 
       let ergebnisDatum = this._datumService.datumPlusMinusTage( this._datumPicker1, plusMinusTageAlsNumber );
 
-      console.log(`Berechnungsergebnis ${this._datumPicker1} + ${plusMinusTageAlsNumber} Tage: ${ergebnisDatum}`);
+      this.zeigeDialog(`Ergebnis: ${ergebnisDatum}`);
 
     } else {
 
-      console.log("Berechnung für diesen Modus noch nicht implementiert.");
+      let diffAnzahlTage = this._datumService.datumsDifferenz(this._datumPicker1, this._datumPicker2);
 
+      this.zeigeDialog(`Differenz: ${diffAnzahlTage} Tage`);
     }
+  }
+
+
+  /**
+   * Alert anzeigen, siehe auch https://ionicframework.com/docs/api/alert
+   *
+   * @param nachricht  Anzuzeigender Text
+   */
+  async zeigeDialog(nachricht: string) {
+
+    const meinAlert =
+          await this._alertCtrl.create({header  : "Ergebnis",
+                                       message : nachricht,
+                                       buttons : [ "Ok" ]
+                                      });
+    await meinAlert.present();
   }
 
 }
