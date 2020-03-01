@@ -48,13 +48,13 @@ export class DatumService {
 
 
   /**
-   * Method um Differenz zwischen zwei Datumswerten zu berechnen.
+   * Method um Differenz in Tagen zwischen zwei Datumswerten zu berechnen.
    *
    * @param datumIsoString1  Datumswert 1 als ISO-String.
    *
    * @param datumIsoString2  Datumswert 2 als ISO-String.
    *
-   * @return  Differenz in Tagen
+   * @return  Differenz in Tagen, kann auch negativ sein.
    */
   datumsDifferenz( datumIsoString1 : string, datumIsoString2 : string ) : Number {
 
