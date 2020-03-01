@@ -91,7 +91,7 @@ export class HomePage {
 
 
   /**
-   * Alert anzeigen, siehe auch https://ionicframework.com/docs/api/alert
+   * Alert/Dialog anzeigen, siehe auch https://ionicframework.com/docs/api/alert
    *
    * @param nachricht  Anzuzeigender Text
    */
@@ -99,8 +99,8 @@ export class HomePage {
 
     const meinAlert =
           await this._alertCtrl.create({header  : "Ergebnis",
-                                       message : nachricht,
-                                       buttons : [ "Ok" ]
+                                        message : nachricht,
+                                        buttons : [ "Ok" ]
                                       });
     await meinAlert.present();
   }

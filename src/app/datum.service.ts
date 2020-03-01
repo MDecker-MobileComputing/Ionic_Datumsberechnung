@@ -12,7 +12,8 @@ import * as moment from 'moment';
 export class DatumService {
 
   /**
-   * Moment.js auf Sprache "Deutsch" einstellen.
+   * Moment.js auf Sprache "Deutsch" einstellen, damit deutsche Namen für
+   * Monat und Wochentag verwendet werden.
    */
   constructor() {
 
@@ -43,7 +44,7 @@ export class DatumService {
    */
   datumPlusMinusTage( datumIsoString : string, tage: number ) : string {
 
-    return moment(datumIsoString).add( tage, "day").format('DD MMMM YYYY (dddd)');
+    return moment(datumIsoString).add( tage, "day").format("DD MMMM YYYY (dddd)");
   }
 
 
