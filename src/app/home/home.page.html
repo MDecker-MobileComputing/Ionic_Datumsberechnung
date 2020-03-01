@@ -24,7 +24,7 @@
       <ion-label>{{_datumPicker1Label}}</ion-label>
       <ion-datetime display-format="DD MMM YYYY (DDDD)"
                      picker-format="DD.MM.YYYY"
-                       [(ngModel)]="_defaultDatumFuerDatePicker1">
+                       [(ngModel)]="_datumPicker1">
       </ion-datetime>
     </ion-item>
 
@@ -32,15 +32,17 @@
       <ion-label>Datum 2</ion-label>
       <ion-datetime display-format="DD MMM YYYY (DDDD)"
                      picker-format="DD.MM.YYYY"
-                       [(ngModel)]="_defaultDatumFuerDatePicker2">
+                       [(ngModel)]="_datumPicker2">
       </ion-datetime>
     </ion-item>
 
     <ion-item [hidden]="!_plusMinusModus">
-      <ion-label>Tage addieren/subtrahieren:</ion-label>
-      <ion-input type="number" value="90"></ion-input>
+      <ion-label>Tage plus/minus:</ion-label>
+      <ion-input type="number" [(ngModel)]="_plusMinusTage"></ion-input>
     </ion-item>
 
   </ion-list>
+
+  <ion-button expand="block" (click)="onBerechnungButton()">Berechnen</ion-button>
 
 </ion-content>
