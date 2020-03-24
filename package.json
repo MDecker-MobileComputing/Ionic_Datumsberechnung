@@ -11,6 +11,9 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "config": {
+    "ionic_source_map": "source-map"
+  },
   "private": true,
   "dependencies": {
     "@angular/common": "~8.2.14",

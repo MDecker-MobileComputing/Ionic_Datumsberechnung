@@ -10,19 +10,19 @@ import { AlertController } from '@ionic/angular';
 export class HomePage {
 
   /** Datum von DatePicker-Element 1. */
-  _datumPicker1: string = "";
+  private _datumPicker1: string = "";
 
   /** Datum von DatePicker-Element 2. */
-  _datumPicker2: string = "";
+  private _datumPicker2: string = "";
 
   /** Wird auf "Datum 1" geändert, wenn mit Segment-Button "differenz" ausgewählt. */
-  _datumPicker1Label = "Datum";
+  private _datumPicker1Label = "Datum";
 
   /** Flag, mit dem die Sichtbarkeit der dynamischen Elemente gesteuert wird. */
-  _plusMinusModus = true;
+  private _plusMinusModus = true;
 
   /** Wert in ion-input-Element mit Anzahl Tage (muss String sein, obwohl type="number"). */
-  _plusMinusTage = "30";
+  private _plusMinusTage = "30";
 
 
   /**
@@ -42,7 +42,7 @@ export class HomePage {
   /**
    * Event-Handler-Methode für Zustandsänderung des Segment-Buttons.
    *
-   * @param event CustomEvent<SegmentChangeEventDetail>
+   * @param event  CustomEvent<SegmentChangeEventDetail>
    */
   async onSegmentButtonGeaendert(event: any) {
 
@@ -79,23 +79,23 @@ export class HomePage {
 
       let ergebnisDatum = this._datumService.datumPlusMinusTage( this._datumPicker1, plusMinusTageAlsNumber );
 
-      this.zeigeDialog(`Ergebnis: ${ergebnisDatum}`);
+      this.zeigeErgebnisDialog(`Ergebnis: ${ergebnisDatum}`);
 
     } else {
 
       let diffAnzahlTage = this._datumService.datumsDifferenz(this._datumPicker1, this._datumPicker2);
 
-      this.zeigeDialog(`Differenz: ${diffAnzahlTage} Tage`);
+      this.zeigeErgebnisDialog(`Differenz: ${diffAnzahlTage} Tage`);
     }
   }
 
 
   /**
-   * Alert/Dialog anzeigen, siehe auch https://ionicframework.com/docs/api/alert
+   * Ergebnis in Dialog anzeigen, siehe auch https://ionicframework.com/docs/api/alert
    *
    * @param nachricht  Anzuzeigender Text
    */
-  async zeigeDialog(nachricht: string) {
+  async zeigeErgebnisDialog(nachricht: string) {
 
     const meinAlert =
           await this._alertCtrl.create({header  : "Ergebnis",
