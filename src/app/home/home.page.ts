@@ -10,13 +10,13 @@ import { AlertController } from '@ionic/angular';
 export class HomePage {
 
   /** Datum von DatePicker-Element 1. */
-  private _datumPicker1: string = "";
+  private _datumPicker1 : string = "";
 
   /** Datum von DatePicker-Element 2. */
-  private _datumPicker2: string = "";
+  private _datumPicker2 : string = "";
 
   /** Wird auf "Datum 1" geändert, wenn mit Segment-Button "differenz" ausgewählt. */
-  private _datumPicker1Label :string = "Datum";
+  private _datumPicker1Label : string = "Datum";
 
   /** Flag, mit dem die Sichtbarkeit der dynamischen Elemente gesteuert wird. */
   private _plusMinusModus : boolean = true;
