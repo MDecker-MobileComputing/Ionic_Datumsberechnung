@@ -16,13 +16,13 @@ export class HomePage {
   private _datumPicker2: string = "";
 
   /** Wird auf "Datum 1" geändert, wenn mit Segment-Button "differenz" ausgewählt. */
-  private _datumPicker1Label = "Datum";
+  private _datumPicker1Label :string = "Datum";
 
   /** Flag, mit dem die Sichtbarkeit der dynamischen Elemente gesteuert wird. */
-  private _plusMinusModus = true;
+  private _plusMinusModus : boolean = true;
 
   /** Wert in ion-input-Element mit Anzahl Tage (muss String sein, obwohl type="number"). */
-  private _plusMinusTage = "30";
+  private _plusMinusTage : string = "30";
 
 
   /**
@@ -98,9 +98,9 @@ export class HomePage {
   async zeigeErgebnisDialog(nachricht: string) {
 
     const meinAlert =
-          await this._alertCtrl.create({header  : "Ergebnis",
-                                        message : nachricht,
-                                        buttons : [ "Ok" ]
+          await this._alertCtrl.create({ header  : "Ergebnis",
+                                         message : nachricht,
+                                         buttons : [ "Ok" ]
                                       });
     await meinAlert.present();
   }

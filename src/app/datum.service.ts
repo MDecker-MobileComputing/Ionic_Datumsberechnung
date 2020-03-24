@@ -57,7 +57,7 @@ export class DatumService {
    *
    * @return  Differenz in Tagen, kann auch negativ sein.
    */
-  datumsDifferenz( datumIsoString1 : string, datumIsoString2 : string ) : Number {
+  datumsDifferenz( datumIsoString1 : string, datumIsoString2 : string ) : number {
 
     let moment1 = moment(datumIsoString1);
     let moment2 = moment(datumIsoString2);
