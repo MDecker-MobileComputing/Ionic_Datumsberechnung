@@ -83,7 +83,7 @@ export class HomePage {
 
     } else {
 
-      let diffAnzahlTage = this._datumService.datumsDifferenz(this._datumPicker1, this._datumPicker2);
+      let diffAnzahlTage = this._datumService.datumsDifferenz( this._datumPicker1, this._datumPicker2 );
 
       this.zeigeErgebnisDialog(`Differenz: ${diffAnzahlTage} Tage`);
     }
@@ -101,7 +101,7 @@ export class HomePage {
           await this._alertCtrl.create({ header  : "Ergebnis",
                                          message : nachricht,
                                          buttons : [ "Ok" ]
-                                      });
+                                       });
     await meinAlert.present();
   }
 
