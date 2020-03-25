@@ -5,6 +5,9 @@ import * as moment from 'moment';
 /**
  * Service-Klasse für Datums-Berechnungen, verwendet moment.js:
  * https://momentjs.com/docs/#/use-it/typescript/
+ *
+ * Beim verwendeten ISO-Format für Datum/Zeit handelt es sich um ISO 8610.
+ * Dieses Format wird von vom Element <ion-datetime> unterstützt.
  */
 @Injectable({
   providedIn: 'root'
@@ -44,7 +47,7 @@ export class DatumService {
    */
   datumPlusMinusTage( datumIsoString : string, tage: number ) : string {
 
-    return moment(datumIsoString).add( tage, "day").format("DD MMMM YYYY (dddd)");
+    return moment(datumIsoString).add( tage, "day" ).format("DD MMMM YYYY (dddd)");
   }
 
 
@@ -62,7 +65,7 @@ export class DatumService {
     let moment1 = moment(datumIsoString1);
     let moment2 = moment(datumIsoString2);
 
-    return moment2.diff(moment1, "days");
+    return moment2.diff( moment1, "days" );
   }
 
 }
