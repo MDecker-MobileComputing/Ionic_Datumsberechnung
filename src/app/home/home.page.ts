@@ -33,7 +33,7 @@ export class HomePage {
   constructor( private _datumService : DatumService,
                private _alertCtrl    : AlertController ) {
 
-    this._datumPicker1 = new Date().toISOString();
+    this._datumPicker1 = this._datumService.heute();
 
     this._datumPicker2 = this._datumService.heutePlusEinMonat();
   }
@@ -70,8 +70,6 @@ export class HomePage {
    * Event-Handler für Button zum Durchführen der Berechnung.
    */
   async onBerechnungButton() {
-
-    console.log("onBerechnungButton gedrückt");
 
     if (this._plusMinusModus) {
 

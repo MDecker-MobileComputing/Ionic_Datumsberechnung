@@ -25,6 +25,18 @@ export class DatumService {
 
 
   /**
+   * Liefert Datum "heute" als String für datetime-Element von Ionic zurück.
+   *
+   * @return  Datum als String im ISO-Format (kann von Ionic datetime-element dargestellt werden),
+   *          z.B. "2020-03-31T09:34:46.783Z".
+   */
+  heute() : string {
+
+    return moment().toISOString();
+  }
+
+
+  /**
    * Liefert Datum "heute + 1 Monat" als String für datetime-Element von Ionic zurück.
    *
    * @return  Datum als String im ISO-Format (kann von Ionic datetime-element dargestellt werden),
