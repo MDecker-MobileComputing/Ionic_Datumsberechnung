@@ -27,8 +27,8 @@ export class DatumService {
   /**
    * Liefert Datum "heute" als String für datetime-Element von Ionic zurück.
    *
-   * @return  Datum als String im ISO-Format (kann von Ionic datetime-element dargestellt werden),
-   *          z.B. "2020-03-31T09:34:46.783Z".
+   * @return  Datum als String im ISO-Format (kann von Ionic datetime-element dargestellt 
+   *          werden), z.B. "2020-03-31T09:34:46.783Z".
    */
   heute() : string {
 
@@ -39,8 +39,8 @@ export class DatumService {
   /**
    * Liefert Datum "heute + 1 Monat" als String für datetime-Element von Ionic zurück.
    *
-   * @return  Datum als String im ISO-Format (kann von Ionic datetime-element dargestellt werden),
-   *          z.B. "2020-03-31T09:34:46.783Z".
+   * @return  Datum als String im ISO-Format (kann von Ionic datetime-element dargestellt 
+   *          werden), z.B. "2020-03-31T09:34:46.783Z".
    */
   heutePlusEinMonat() : string {
 
@@ -49,11 +49,14 @@ export class DatumService {
 
 
   /**
-   * Methode um auf ein als ISO-String übergebenes Datum eine bestimmte Anzahl Tage aufzuaddieren bzw. zu subtrahieren.
+   * Methode um auf ein als ISO-String übergebenes Datum eine bestimmte Anzahl Tage 
+   * aufzuaddieren bzw. zu subtrahieren.
    *
-   * @param datumIsoString  Datum als ISO-String, auf das eine bestimmte Anzahl Tage addiert/subtrahiert werden sollen).
+   * @param datumIsoString  Datum als ISO-String, auf das eine bestimmte Anzahl Tage 
+   *                        addiert/subtrahiert werden sollen.
    *
-   * @param tage  Anzahl Tage die auf das Datum zu addieren sind (bei negativem Vorzeichen wird subtrahiert).
+   * @param tage  Anzahl Tage die auf das Datum zu addieren sind (bei negativem Vorzeichen 
+   *              wird subtrahiert).
    *
    * @return  Ergebnis der Berechnung, z.B. "12 März 2020 (Dienstag)".
    */
