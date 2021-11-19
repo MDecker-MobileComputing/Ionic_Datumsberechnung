@@ -34,7 +34,6 @@ export class HomePage {
                private _alertCtrl    : AlertController ) {
 
     this._datumPicker1 = this._datumService.heute();
-
     this._datumPicker2 = this._datumService.heutePlusEinMonat();
   }
 
