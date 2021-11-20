@@ -1,6 +1,8 @@
 # Ionic-App "Datumberechnung" (Date Calculation) #
 
-Simple [Ionic](https://ionicframework.com) app to perform date calculations.
+Simple [Ionic](https://ionicframework.com) app to perform date calculations:
+* Number of days between two days.
+* Add/subtracting number of days from given date.
 
 <br>
 
