@@ -60,7 +60,7 @@ export class HomePage {
         break;
 
       default:
-        console.log(`Unerwarteter SegmentWert \"${segmentWert}\".`);
+        console.log(`Interner Fehler: Unerwarteter SegmentWert \"${segmentWert}\".`);
     }
   }
 
@@ -72,17 +72,18 @@ export class HomePage {
 
     if (this._plusMinusModus) {
 
+      // Umwandlung: String nach Zahl
       let plusMinusTageAlsNumber = Number(this._plusMinusTage);
 
-      let ergebnisDatum = 
-          this._datumService.datumPlusMinusTage( this._datumPicker1, 
+      let ergebnisDatum =
+          this._datumService.datumPlusMinusTage( this._datumPicker1,
                                                  plusMinusTageAlsNumber );
 
       this.zeigeErgebnisDialog(`Ergebnis: ${ergebnisDatum}`);
 
-    } else {
+    } else { // Modus mit zwei Datumswerten
 
-      let diffAnzahlTage = this._datumService.datumsDifferenz( this._datumPicker1, 
+      let diffAnzahlTage = this._datumService.datumsDifferenz( this._datumPicker1,
                                                                this._datumPicker2 );
 
       this.zeigeErgebnisDialog(`Differenz: ${diffAnzahlTage} Tage`);
