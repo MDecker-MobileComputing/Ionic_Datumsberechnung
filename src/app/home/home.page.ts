@@ -68,7 +68,7 @@ export class HomePage {
   /**
    * Event-Handler für Button zum Durchführen der Berechnung.
    */
-  async onBerechnungButton() {
+  public async onBerechnungButton() {
 
     if (this._plusMinusModus) {
 

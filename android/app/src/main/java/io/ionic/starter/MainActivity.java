@@ -1,4 +1,4 @@
-package de.mide.ionic.datumsberechnung;
+package io.ionic.starter;
 
 import com.getcapacitor.BridgeActivity;
 

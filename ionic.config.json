@@ -1,7 +1,6 @@
 {
-  "name": "Datumsberechnungen",
+  "name": "Datumsberechnung",
   "integrations": {
-    "cordova": {},
     "capacitor": {}
   },
   "type": "angular"
