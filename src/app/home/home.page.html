@@ -27,7 +27,7 @@
       </ion-datetime>
     </ion-item>
 
-    <ion-item [hidden]="_plusMinusModus">
+    <ion-item *ngIf="_plusMinusModus">
       <ion-label>Datum 2</ion-label>
       <ion-datetime display-format="DD MMM YYYY (DDDD)"
                      picker-format="DD.MM.YYYY"
@@ -36,7 +36,7 @@
       </ion-datetime>
     </ion-item>
 
-    <ion-item [hidden]="!_plusMinusModus">
+    <ion-item *ngIf="!_plusMinusModus">
       <ion-label>Tage plus/minus:</ion-label>
       <ion-input type="number" [(ngModel)]="_plusMinusTage"></ion-input>
     </ion-item>
