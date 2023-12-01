@@ -47,7 +47,7 @@ export class HomePage {
 
     let segmentWert = event.detail.value;
 
-    switch (event.detail.value) {
+    switch (segmentWert) {
 
       case "plusMinus":
           this._plusMinusModus    = true;
