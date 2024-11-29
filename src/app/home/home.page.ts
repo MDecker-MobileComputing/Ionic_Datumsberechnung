@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { DatumService } from '../datum.service';
 import { AlertController } from '@ionic/angular';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -43,11 +44,11 @@ export class HomePage {
    *
    * @param event  CustomEvent<SegmentChangeEventDetail>
    */
-  async onSegmentButtonGeaendert(event: any) {
+  async onSegmentButtonGeaendert( event: any ) {
 
     let segmentWert = event.detail.value;
 
-    switch (segmentWert) {
+    switch ( segmentWert ) {
 
       case "plusMinus":
           this._plusMinusModus    = true;
@@ -60,7 +61,7 @@ export class HomePage {
         break;
 
       default:
-        console.log(`Interner Fehler: Unerwarteter SegmentWert \"${segmentWert}\".`);
+        console.log( `Interner Fehler: Unerwarteter SegmentWert \"${segmentWert}\".` );
     }
   }
 
@@ -70,23 +71,23 @@ export class HomePage {
    */
   public async onBerechnungButton() {
 
-    if (this._plusMinusModus) {
+    if ( this._plusMinusModus ) {
 
       // Umwandlung: String nach Zahl
-      let plusMinusTageAlsNumber = Number(this._plusMinusTage);
+      let plusMinusTageAlsNumber = Number( this._plusMinusTage );
 
       let ergebnisDatum =
           this._datumService.datumPlusMinusTage( this._datumPicker1,
                                                  plusMinusTageAlsNumber );
 
-      this.zeigeErgebnisDialog(`Ergebnis: ${ergebnisDatum}`);
+      this.zeigeErgebnisDialog( `Ergebnis: ${ergebnisDatum}` );
 
     } else { // Modus mit zwei Datumswerten
 
       let diffAnzahlTage = this._datumService.datumsDifferenz( this._datumPicker1,
                                                                this._datumPicker2 );
 
-      this.zeigeErgebnisDialog(`Differenz: ${diffAnzahlTage} Tage`);
+      this.zeigeErgebnisDialog( `Differenz: ${diffAnzahlTage} Tage` );
     }
   }
 
@@ -96,7 +97,7 @@ export class HomePage {
    *
    * @param nachricht  Anzuzeigender Text
    */
-  async zeigeErgebnisDialog(nachricht: string) {
+  async zeigeErgebnisDialog( nachricht: string ) {
 
     const meinAlert =
           await this._alertCtrl.create({ header  : "Ergebnis",

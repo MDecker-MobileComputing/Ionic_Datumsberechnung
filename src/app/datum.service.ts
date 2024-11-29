@@ -20,7 +20,7 @@ export class DatumService {
    */
   constructor() {
 
-    moment.locale("de");
+    moment.locale( "de" );
   }
 
 
@@ -44,7 +44,7 @@ export class DatumService {
    */
   heutePlusEinMonat() : string {
 
-    return moment().add( 1, "month").toISOString();
+    return moment().add( 1, "month" ).toISOString();
   }
 
 
@@ -62,7 +62,8 @@ export class DatumService {
    */
   datumPlusMinusTage( datumIsoString : string, tage: number ) : string {
 
-    return moment(datumIsoString).add( tage, "day" ).format("DD MMMM YYYY (dddd)");
+    return moment( datumIsoString ).add( tage, "day" )
+                                   .format( "DD MMMM YYYY (dddd)" );
   }
 
 
