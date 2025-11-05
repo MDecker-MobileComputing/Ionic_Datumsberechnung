@@ -5,7 +5,14 @@
 Diese Repository enthält ein [Ionic](https://ionicframework.com/)/Angular-Projekt für eine mobile App.
 Die App kann folgende Datumsberechnungen durchführen:
 * Anzahl Tage zwischen zwei Datumswerten
-* Anzahl Tage auf Datumswert addieren bzw.von Datumswert subtrahieren
+* Anzahl Tage auf Datumswert addieren bzw. von Datumswert subtrahieren
+
+<br>
+
+Mit der App sollen folgende Konzepte demonstriert werden:
+* Verwendung von externen Bibliotheken (hier: [moment.js](https://momentjs.com/))
+* Verwendung von Service-Klassen
+* Dynamisches Ausblenden von UI-Elementen
 
 <br>
 

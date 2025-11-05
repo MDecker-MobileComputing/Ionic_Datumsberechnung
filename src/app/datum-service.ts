@@ -8,6 +8,11 @@ import * as moment from 'moment';
  *
  * Beim verwendeten ISO-Format für Datum/Zeit handelt es sich um ISO 8610.
  * Dieses Format wird von vom Element <ion-datetime> unterstützt.
+ *
+ * Diese Klasse wurde mit dem folgenden Befehl erzeugt:
+ * ```
+ * ionic generate service datumService
+ * ```
  */
 @Injectable({
   providedIn: 'root',
