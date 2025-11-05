@@ -13,7 +13,7 @@ Mit der App sollen folgende Konzepte demonstriert werden:
 * Verwendung von externen Bibliotheken (hier: [moment.js](https://momentjs.com/))
 * Verwendung von Service-Klassen
 * Verwendung von UI-Element [ion-segment](https://ionicframework.com/docs/api/segment)
-* Dynamisches Ausblenden von UI-Elementen
+* Dynamisches Ein-/Ausblenden von UI-Elementen mit `*ngIf`
 
 <br>
 
