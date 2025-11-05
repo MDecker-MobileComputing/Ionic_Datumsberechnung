@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { DatumService } from '../datum.service';
+import { DatumService } from '../datum-service';
 import { AlertController } from '@ionic/angular';
-
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
+  standalone: false,
 })
 export class HomePage {
 

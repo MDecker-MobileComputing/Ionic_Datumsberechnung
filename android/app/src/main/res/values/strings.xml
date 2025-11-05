@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">Datumsberechnung</string>
-    <string name="title_activity_main">Datumsberechnung</string>
-    <string name="package_name">de.mide.ionic.datumsberechnung</string>
-    <string name="custom_url_scheme">de.mide.ionic.datumsberechnung</string>
-</resources>
