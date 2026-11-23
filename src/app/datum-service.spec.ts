@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { DatumService } from './datum-service';
 
 describe('DatumService', () => {
