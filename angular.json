@@ -67,6 +67,13 @@
             },
             "ci": {
               "progress": false
+            },
+            "github-pages": {
+              "baseHref": "https://mdecker-mobilecomputing.github.io/Ionic_Datumsberechnung/",
+              "outputPath": {
+                "base": "docs",
+                "browser": ""
+              }
             }
           },
           "defaultConfiguration": "production"

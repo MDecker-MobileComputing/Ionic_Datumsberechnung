@@ -1,0 +1,1 @@
+import{_ as h}from"./chunk-B51JmvDJ.js";var l=500;var R=(a,s,c,t)=>{if(!a.persisted||!s)return;let f=Date.now(),r=()=>{let o=c();if(s.value!==o){s.type===`password`?t(s.value):s.value=o;return}Date.now()-f<l&&h(r)};h(r)};export{R as t};

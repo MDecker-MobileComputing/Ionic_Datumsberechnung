@@ -1,0 +1,1 @@
+var n=e=>{for(let r=e;r;r=r.parentElement){let t=r.getAttribute(`dir`)?.toLowerCase();if(t===`rtl`)return!0;if(t===`ltr`)return!1}return e.ownerDocument?.dir?.toLowerCase()===`rtl`};export{n as t};
