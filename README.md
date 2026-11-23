@@ -17,6 +17,12 @@ Mit der App sollen folgende Konzepte demonstriert werden:
 
 <br>
 
+Die App kann unter der folgenden URL direkt im Browser getestet werden:
+
+https://mdecker-mobilecomputing.github.io/Ionic_Datumsberechnung/
+
+<br>
+
 ----
 
 ## Screenshots ##
